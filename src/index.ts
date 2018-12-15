@@ -5,7 +5,7 @@ const config = require('../ormconfig.json');
 
 const connectionConfig = Object.assign(config, {
   database: process.env.DB_DATABASE,
-  user: process.env.DB_USER,
+  username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
