@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mypettrackker-be:
+    build:
+      dockerfile: Dockerfile-base
+      context: .
+    environment:
+      - DB_DATABASE=database
+      - DB_USER=user
+      - DB_PASSWORD=password
+      - DB_HOST=127.0.0.1
+      - DB_PORT=3306
+      - DB_TYPE=mysql
+      - API_PORT=8080
+    command: ["npm", "start"]
+    ports:
+      - "8080:8080"
+    restart: always

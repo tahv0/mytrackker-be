@@ -1,0 +1,25 @@
+{
+   "name": "mypettracker-be",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "devDependencies": {
+      "@types/node": "^8.0.29",
+      "apollo-server-express": "^2.2.6",
+      "ts-node": "3.3.0",
+      "typescript": "2.5.2"
+   },
+   "dependencies": {
+      "express": "^4.16.4",
+      "graphql": "^14.0.2",
+      "moment": "^2.22.2",
+      "mysql": "^2.14.1",
+      "random-location": "^1.0.12",
+      "reflect-metadata": "^0.1.10",
+      "type-graphql": "^0.15.0",
+      "typeorm": "0.2.9"
+   },
+   "scripts": {
+      "start": "ts-node src/index.ts",
+      "migrate": "ts-node ./node_modules/.bin/typeorm migration:run"
+   }
+}

@@ -1,0 +1,8 @@
+FROM node:dubnium-alpine
+RUN apk add mysql-client
+WORKDIR /home/node/app
+COPY ./package* ./
+RUN npm install && \
+    npm cache clean --force
+COPY . .
+EXPOSE 8080
