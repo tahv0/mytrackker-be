@@ -32,7 +32,7 @@ export class BatteryLevelResolver {
   @Query(returns => [BatteryLevel])
   async getBatteryLevels(
     @Arg("deviceId") deviceId: string,
-    @Arg("limit", { nullable: true }) limit?: number,
+    @Arg("limit", { nullable: true }) limit?: 10,
     @Arg("startDate", { nullable: true }) startDate?: Date,
     @Arg("endDate", { nullable: true }) endDate?: Date
   ) {
